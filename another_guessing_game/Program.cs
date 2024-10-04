@@ -2,6 +2,12 @@
 {
     internal class Program
     {
+        static int[] nums = new int[1];
+        static int lower;
+        static int upper;
+        static int lowest_contained_number;
+        static int highest_contained_number;
+
         static void Main(string[] args)
         {
             
@@ -14,20 +20,22 @@
                 Console.WriteLine("enter amount of numbers");
 
 
-                (int number, bool revealed)[] nums = new (int number, bool revealed)[Validate_Input(int.MaxValue)];
+                nums = new int[Validate_Input(int.MaxValue)];
 
                 Console.WriteLine("enter range");
                 int range = Validate_Input(int.MaxValue);
+                lower = 0;
+                upper = range+1;
 
 
                 for (int index = 0; index < nums.Length; index++)
                 {
-                    nums[index] = (random.Next(1, range+1), false);
+                    nums[index] = random.Next(1, range+1);
                 }
 
-                int number_to_guess = nums[random.Next(nums.Length)].number;
+                int number_to_guess = nums[random.Next(nums.Length)];
                 
-                PrintNums(nums);
+                PrintNums();
                 //Console.WriteLine(number_to_guess);
 
                 bool game_over = false;
@@ -36,51 +44,35 @@
                 {
                     Console.WriteLine("guess a number");
                     int guess = Validate_Input(range);
-                    bool smaller = false;
+                    
+
                     if (guess == number_to_guess)
                     {
                         Console.WriteLine("you win");
                         game_over = true;
                         for (int index = 0; index < nums.Length; index++)
                         {
-                            nums[index].revealed = true;
+                            lower = number_to_guess;
+                            upper = lower;
                         }
-                        PrintNums(nums);
+                        PrintNums();
                         break;
                     }
                     else if (guess < number_to_guess)
                     {
-                        smaller = true;
+                        lower = guess;
                     }
                     else
                     {
-                        smaller = false;
+                        upper = guess;
                     }
 
-                    if (smaller)
-                    {
-                        for (int index = 0; index < nums.Length; index++)
-                        {
-                            if (nums[index].number <= guess)
-                            {
-                                nums[index].revealed = true;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        for (int index = 0; index < nums.Length; index++)
-                        {
-                            if (nums[index].number >= guess)
-                            {
-                                nums[index].revealed = true;
-                            }
-                        }
-                    }
+                    
+                    
                     bool only_number_to_guess_left = true;
-                    foreach ((int number, bool revealed) in nums)
+                    foreach (int number in nums)
                     {
-                        if (number != number_to_guess && !revealed)
+                        if ((number < number_to_guess && number > lower) || (number > number_to_guess && number < upper))
                         {
                             only_number_to_guess_left = false;
                         }
@@ -88,18 +80,26 @@
 
                     if (only_number_to_guess_left)
                     {
-                        PrintNums(nums);
+                        PrintNums();
                         game_over = true;
-                        for (int index = 0; index < nums.Length; index++)
-                        {
-                            nums[index].revealed = true;
-                        }
+                        lower = number_to_guess;
+                        upper = lower;
                         Console.WriteLine($"you lose\nnumber was {number_to_guess}");
+                    }
+
+                    //TODO stuff here
+
+                    foreach(int number in nums)
+                    {
+                        if(number <= lower && number > lowest_contained_number)
+                        {
+                            lowest_contained_number = number;
+                        }
                     }
 
 
 
-                    PrintNums(nums);
+                    PrintNums();
 
                 }
 
@@ -123,13 +123,14 @@
             } while (another_one);
         }
 
-        static void PrintNums((int number, bool revealed)[] nums)
+        static void PrintNums()
         {
             for (int index = 0; index < nums.Length; index++)
             {
-                if (nums[index].revealed)
+                if (nums[index] <= lower || nums[index] >= upper)
                 {
-                    Console.Write($"{nums[index].number}");
+                    
+                    Console.Write($"{nums[index]}");
 
                 }
                 else
