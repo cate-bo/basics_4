@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "basics_4", "basics_4\basics
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arrays", "arrays\arrays.csproj", "{18809084-701E-47EE-A8FE-D27A8868E73F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "another_guessing_game", "another_guessing_game\another_guessing_game.csproj", "{CCC85952-838F-4E99-9D4C-BD9855822DDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{18809084-701E-47EE-A8FE-D27A8868E73F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18809084-701E-47EE-A8FE-D27A8868E73F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18809084-701E-47EE-A8FE-D27A8868E73F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCC85952-838F-4E99-9D4C-BD9855822DDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCC85952-838F-4E99-9D4C-BD9855822DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCC85952-838F-4E99-9D4C-BD9855822DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCC85952-838F-4E99-9D4C-BD9855822DDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

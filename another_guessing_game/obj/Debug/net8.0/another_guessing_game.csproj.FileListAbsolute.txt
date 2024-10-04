@@ -1,0 +1,15 @@
+C:\Users\cate\source\repos\basics_4\basics_4\another_guessing_game\bin\Debug\net8.0\another_guessing_game.exe
+C:\Users\cate\source\repos\basics_4\basics_4\another_guessing_game\bin\Debug\net8.0\another_guessing_game.deps.json
+C:\Users\cate\source\repos\basics_4\basics_4\another_guessing_game\bin\Debug\net8.0\another_guessing_game.runtimeconfig.json
+C:\Users\cate\source\repos\basics_4\basics_4\another_guessing_game\bin\Debug\net8.0\another_guessing_game.dll
+C:\Users\cate\source\repos\basics_4\basics_4\another_guessing_game\bin\Debug\net8.0\another_guessing_game.pdb
+C:\Users\cate\source\repos\basics_4\basics_4\another_guessing_game\obj\Debug\net8.0\another_guessing_game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cate\source\repos\basics_4\basics_4\another_guessing_game\obj\Debug\net8.0\another_guessing_game.AssemblyInfoInputs.cache
+C:\Users\cate\source\repos\basics_4\basics_4\another_guessing_game\obj\Debug\net8.0\another_guessing_game.AssemblyInfo.cs
+C:\Users\cate\source\repos\basics_4\basics_4\another_guessing_game\obj\Debug\net8.0\another_guessing_game.csproj.CoreCompileInputs.cache
+C:\Users\cate\source\repos\basics_4\basics_4\another_guessing_game\obj\Debug\net8.0\another_guessing_game.sourcelink.json
+C:\Users\cate\source\repos\basics_4\basics_4\another_guessing_game\obj\Debug\net8.0\another_guessing_game.dll
+C:\Users\cate\source\repos\basics_4\basics_4\another_guessing_game\obj\Debug\net8.0\refint\another_guessing_game.dll
+C:\Users\cate\source\repos\basics_4\basics_4\another_guessing_game\obj\Debug\net8.0\another_guessing_game.pdb
+C:\Users\cate\source\repos\basics_4\basics_4\another_guessing_game\obj\Debug\net8.0\another_guessing_game.genruntimeconfig.cache
+C:\Users\cate\source\repos\basics_4\basics_4\another_guessing_game\obj\Debug\net8.0\ref\another_guessing_game.dll
