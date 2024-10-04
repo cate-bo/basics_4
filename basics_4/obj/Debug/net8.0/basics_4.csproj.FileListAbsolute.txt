@@ -1,0 +1,15 @@
+C:\Users\cate\source\repos\basics_4\basics_4\basics_4\bin\Debug\net8.0\basics_4.exe
+C:\Users\cate\source\repos\basics_4\basics_4\basics_4\bin\Debug\net8.0\basics_4.deps.json
+C:\Users\cate\source\repos\basics_4\basics_4\basics_4\bin\Debug\net8.0\basics_4.runtimeconfig.json
+C:\Users\cate\source\repos\basics_4\basics_4\basics_4\bin\Debug\net8.0\basics_4.dll
+C:\Users\cate\source\repos\basics_4\basics_4\basics_4\bin\Debug\net8.0\basics_4.pdb
+C:\Users\cate\source\repos\basics_4\basics_4\basics_4\obj\Debug\net8.0\basics_4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cate\source\repos\basics_4\basics_4\basics_4\obj\Debug\net8.0\basics_4.AssemblyInfoInputs.cache
+C:\Users\cate\source\repos\basics_4\basics_4\basics_4\obj\Debug\net8.0\basics_4.AssemblyInfo.cs
+C:\Users\cate\source\repos\basics_4\basics_4\basics_4\obj\Debug\net8.0\basics_4.csproj.CoreCompileInputs.cache
+C:\Users\cate\source\repos\basics_4\basics_4\basics_4\obj\Debug\net8.0\basics_4.sourcelink.json
+C:\Users\cate\source\repos\basics_4\basics_4\basics_4\obj\Debug\net8.0\basics_4.dll
+C:\Users\cate\source\repos\basics_4\basics_4\basics_4\obj\Debug\net8.0\refint\basics_4.dll
+C:\Users\cate\source\repos\basics_4\basics_4\basics_4\obj\Debug\net8.0\basics_4.pdb
+C:\Users\cate\source\repos\basics_4\basics_4\basics_4\obj\Debug\net8.0\basics_4.genruntimeconfig.cache
+C:\Users\cate\source\repos\basics_4\basics_4\basics_4\obj\Debug\net8.0\ref\basics_4.dll

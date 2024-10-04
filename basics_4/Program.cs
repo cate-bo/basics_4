@@ -7,6 +7,7 @@
             int testInt = 500;
             short testShort = 100;
             float testfloat = 3.5f;
+            long testLong = long.MaxValue;
 
             int targetInt = 0;
             short targetShort = 0;
@@ -22,8 +23,16 @@
             targetShort = (short)testInt;
 
 
+            string thing = "10";
+
+            
+            targetInt = int.Parse(thing);
 
 
+
+            float targetFloat = testLong + 1;
+
+            Console.WriteLine(long.MaxValue + "       " + targetFloat);
 
 
         }
