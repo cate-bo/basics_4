@@ -1,0 +1,15 @@
+C:\Users\cate\source\repos\basics_4\basics_4\multidimensional_arrays\bin\Debug\net8.0\multidimensional_arrays.exe
+C:\Users\cate\source\repos\basics_4\basics_4\multidimensional_arrays\bin\Debug\net8.0\multidimensional_arrays.deps.json
+C:\Users\cate\source\repos\basics_4\basics_4\multidimensional_arrays\bin\Debug\net8.0\multidimensional_arrays.runtimeconfig.json
+C:\Users\cate\source\repos\basics_4\basics_4\multidimensional_arrays\bin\Debug\net8.0\multidimensional_arrays.dll
+C:\Users\cate\source\repos\basics_4\basics_4\multidimensional_arrays\bin\Debug\net8.0\multidimensional_arrays.pdb
+C:\Users\cate\source\repos\basics_4\basics_4\multidimensional_arrays\obj\Debug\net8.0\multidimensional_arrays.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cate\source\repos\basics_4\basics_4\multidimensional_arrays\obj\Debug\net8.0\multidimensional_arrays.AssemblyInfoInputs.cache
+C:\Users\cate\source\repos\basics_4\basics_4\multidimensional_arrays\obj\Debug\net8.0\multidimensional_arrays.AssemblyInfo.cs
+C:\Users\cate\source\repos\basics_4\basics_4\multidimensional_arrays\obj\Debug\net8.0\multidimensional_arrays.csproj.CoreCompileInputs.cache
+C:\Users\cate\source\repos\basics_4\basics_4\multidimensional_arrays\obj\Debug\net8.0\multidimensional_arrays.sourcelink.json
+C:\Users\cate\source\repos\basics_4\basics_4\multidimensional_arrays\obj\Debug\net8.0\multidimensional_arrays.dll
+C:\Users\cate\source\repos\basics_4\basics_4\multidimensional_arrays\obj\Debug\net8.0\refint\multidimensional_arrays.dll
+C:\Users\cate\source\repos\basics_4\basics_4\multidimensional_arrays\obj\Debug\net8.0\multidimensional_arrays.pdb
+C:\Users\cate\source\repos\basics_4\basics_4\multidimensional_arrays\obj\Debug\net8.0\multidimensional_arrays.genruntimeconfig.cache
+C:\Users\cate\source\repos\basics_4\basics_4\multidimensional_arrays\obj\Debug\net8.0\ref\multidimensional_arrays.dll
