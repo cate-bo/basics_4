@@ -109,7 +109,7 @@
                 for (int x = 0; x < playArea.GetLength(0); x++)
                 {
 
-                    //if(playArea[x, y] == 9) break;
+                    if(playArea[x, y] == 9) break;
 
 
                     int upperOffset = 1;
@@ -147,10 +147,9 @@
                             }
                         }
                     }
-                    if (playArea[y, x] != 9)
-                    {
-                        playArea[x, y] = adjacentMines;
-                    }
+                    
+                    playArea[x, y] = adjacentMines;
+                    
                 }
             }
 
