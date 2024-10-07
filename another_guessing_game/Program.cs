@@ -46,8 +46,8 @@ namespace another_guessing_game
                 {
                     Console.WriteLine("guess a number");
                     int guess = Validate_Input(range);
-                    
 
+                    bool only_number_to_guess_left = true;
                     if (guess == number_to_guess)
                     {
                         Console.WriteLine("you win");
@@ -56,9 +56,10 @@ namespace another_guessing_game
                         {
                             lower = number_to_guess;
                             upper = lower;
+                            only_number_to_guess_left = false;
                         }
-                        PrintNums();
-                        break;
+                        
+                        
                     }
                     else if (guess < number_to_guess)
                     {
@@ -71,7 +72,7 @@ namespace another_guessing_game
 
                     
                     
-                    bool only_number_to_guess_left = true;
+                    
                     foreach (int number in nums)
                     {
                         if ((number < number_to_guess && number > lower) || (number > number_to_guess && number < upper))
@@ -82,11 +83,12 @@ namespace another_guessing_game
 
                     if (only_number_to_guess_left)
                     {
-                        PrintNums();
+                        
                         game_over = true;
                         lower = number_to_guess;
                         upper = lower;
                         Console.WriteLine($"you lose\nnumber was {number_to_guess}");
+                        
                     }
 
 
@@ -137,12 +139,19 @@ namespace another_guessing_game
             {
                 if (nums[index] <= lower || nums[index] >= upper)
                 {
+
                     if (nums[index] == lowest_revealed_number)
                     {
+                        
                         Console.ForegroundColor = ConsoleColor.Green;
-                    }else if(nums[index] == highest_revealed_number)
+                    }
+                    else if(nums[index] == highest_revealed_number)
                     {
                         Console.ForegroundColor = ConsoleColor.Blue;
+                    }
+                    if (nums[index] == lower && nums[index] == upper)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Magenta;
                     }
                     Console.Write($"{nums[index]}");
                     Console.ForegroundColor = ConsoleColor.White;
