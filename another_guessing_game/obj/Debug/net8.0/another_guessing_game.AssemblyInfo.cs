@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("another_guessing_game")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+243721ec610f6d86024d4922088657a4ddbb81d0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+254a1271428d001b398f41ec42ec3260d6845885")]
 [assembly: System.Reflection.AssemblyProductAttribute("another_guessing_game")]
 [assembly: System.Reflection.AssemblyTitleAttribute("another_guessing_game")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

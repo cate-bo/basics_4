@@ -1,16 +1,18 @@
-﻿namespace another_guessing_game
+﻿using System;
+
+namespace another_guessing_game
 {
     internal class Program
     {
         static int[] nums = new int[1];
         static int lower;
         static int upper;
-        static int lowest_contained_number;
-        static int highest_contained_number;
+        static int lowest_revealed_number;
+        static int highest_revealed_number;
 
         static void Main(string[] args)
         {
-            
+            highest_revealed_number = int.MaxValue;
             Random random = new Random();
             bool another_one = false;
             do
@@ -87,13 +89,19 @@
                         Console.WriteLine($"you lose\nnumber was {number_to_guess}");
                     }
 
-                    //TODO stuff here
 
-                    foreach(int number in nums)
+                    foreach (int placeholder_variable in nums)
                     {
-                        if(number <= lower && number > lowest_contained_number)
+                        foreach (int number in nums)
                         {
-                            lowest_contained_number = number;
+                            if (number <= lower && number > lowest_revealed_number)
+                            {
+                                lowest_revealed_number = number;
+                            }
+                            if (number >= upper && number < highest_revealed_number)
+                            {
+                                highest_revealed_number = number;
+                            }
                         }
                     }
 
@@ -129,9 +137,15 @@
             {
                 if (nums[index] <= lower || nums[index] >= upper)
                 {
-                    
+                    if (nums[index] == lowest_revealed_number)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                    }else if(nums[index] == highest_revealed_number)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                    }
                     Console.Write($"{nums[index]}");
-
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
                 else
                 {
