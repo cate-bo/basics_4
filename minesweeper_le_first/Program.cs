@@ -382,12 +382,12 @@
                 for (int width = x - leftOffset; width <= x + rightOffset; width++)
                 {
 
-                    if (!playArea[width, height].revealed && playArea[width, height].adjacentMines == 0)
+                    if (!playArea[width, height].revealed)
                     {
                         RevealField(width, height);
                     }
 
-                    playArea[width, height].revealed = true;
+                    //playArea[width, height].revealed = true;
                 }
             }
         }
