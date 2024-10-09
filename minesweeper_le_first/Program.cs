@@ -20,7 +20,7 @@
                 areaHeight = Validate_Input(2, int.MaxValue);
 
                 Console.WriteLine($"enter mine count (max {(areaWidth * areaHeight) / 2})");
-                mineCount = Validate_Input(1,(areaWidth * areaHeight) / 2);
+                mineCount = Validate_Input(1, (areaWidth * areaHeight) / 2);
 
                 playArea = new int[areaWidth, areaHeight];
                 // x and y coordinates correspond to lines and columns
@@ -32,11 +32,11 @@
                     }
                 }
 
-                while(mineCount > 0)
+                while (mineCount > 0)
                 {
                     int x = rand.Next(0, playArea.GetLength(0));
                     int y = rand.Next(0, playArea.GetLength(1));
-                    if (playArea[x,y] == 0)
+                    if (playArea[x, y] == 0)
                     {
                         playArea[x, y] = 9;
                         mineCount--;
@@ -62,11 +62,12 @@
                     if (playArea[x, y] <= 8)
                     {
                         Console.Write(playArea[x, y]);
-                    }else if (playArea[x, y] == 9)
+                    }
+                    else if (playArea[x, y] == 9)
                     {
                         Console.Write("X");
                     }
-                    
+
                     //Console.Write(playArea[x, y]);
                 }
                 Console.WriteLine();
@@ -109,7 +110,7 @@
                 for (int x = 0; x < playArea.GetLength(0); x++)
                 {
 
-                    if(playArea[x, y] == 9) break;
+                    if (playArea[x, y] == 9) continue;
 
 
                     int upperOffset = 1;
@@ -117,8 +118,8 @@
                     int leftOffset = 1;
                     int rightOffset = 1;
                     int adjacentMines = 0;
-                    if (y == 0) 
-                    { 
+                    if (y == 0)
+                    {
                         upperOffset = 0;
                     }
                     if (y == playArea.GetLength(1) - 1)
@@ -133,12 +134,12 @@
                     {
                         rightOffset = 0;
                     }
-                
 
 
-                    for (int height = y-upperOffset; height <= y+lowerOffset; height++)
+
+                    for (int height = y - upperOffset; height <= y + lowerOffset; height++)
                     {
-                        for(int width = x-leftOffset; width <= x+rightOffset; width++)
+                        for (int width = x - leftOffset; width <= x + rightOffset; width++)
                         {
                             //if (height == y && width == x) break;
                             if (playArea[width, height] == 9)
@@ -147,9 +148,9 @@
                             }
                         }
                     }
-                    
+
                     playArea[x, y] = adjacentMines;
-                    
+
                 }
             }
 
