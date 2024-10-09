@@ -227,6 +227,7 @@
                     //Console.Write(playArea[x, y]);
                 }
                 Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine();
             }
 
