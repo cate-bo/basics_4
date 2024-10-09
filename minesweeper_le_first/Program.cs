@@ -10,6 +10,8 @@
         static Random rand = new Random();
         static void Main(string[] args)
         {
+            Console.BackgroundColor = ConsoleColor.Gray;
+            Console.ForegroundColor = ConsoleColor.Black;
 
             do
             {
@@ -54,24 +56,59 @@
 
         static void DisplayPlayArea()
         {
+            Console.Write("  ");
+            for(int width = 0; width < playArea.GetLength(0); width++)
+            {
+                Console.Write($"{width} ");
+            }
+            Console.Write("  ");
+            Console.WriteLine();
+            Console.Write("  ");
+            for (int width = 0; width < playArea.GetLength(0); width++)
+            {
+                Console.Write($"__");
+            }
+            Console.Write("  ");
+            Console.WriteLine();
+
             for (int y = 0; y < playArea.GetLength(1); y++)
             {
+                Console.Write($"{y}|");
                 for (int x = 0; x < playArea.GetLength(0); x++)
                 {
-
-                    if (playArea[x, y] <= 8)
+                    
+                    if(playArea[x, y] == 0)
                     {
-                        Console.Write(playArea[x, y]);
+                        Console.Write("  ");
+                    }
+                    else if (playArea[x, y] <= 8)
+                    {
+                        switch (playArea[x, y])
+                        {
+                            
+                            case 1: Console.ForegroundColor = ConsoleColor.Blue; break;
+                            case 2: Console.ForegroundColor = ConsoleColor.Green; break;
+                            case 3: Console.ForegroundColor = ConsoleColor.Red; break;
+                            default: Console.ForegroundColor = ConsoleColor.Magenta; break;
+                        }
+                        Console.Write($"{playArea[x, y]} ");
+                        Console.ForegroundColor = ConsoleColor.Black;
                     }
                     else if (playArea[x, y] == 9)
                     {
-                        Console.Write("X");
+                        Console.Write("X ");
                     }
 
                     //Console.Write(playArea[x, y]);
                 }
-                Console.WriteLine();
+                Console.WriteLine("|");
             }
+            Console.Write("  ");
+            for (int width = 0; width < playArea.GetLength(0); width++)
+            {
+                Console.Write($"__");
+            }
+            Console.WriteLine();
         }
 
 
@@ -141,7 +178,7 @@
                     {
                         for (int width = x - leftOffset; width <= x + rightOffset; width++)
                         {
-                            //if (height == y && width == x) break;
+                            if (height == y && width == x) continue;
                             if (playArea[width, height] == 9)
                             {
                                 adjacentMines++;
