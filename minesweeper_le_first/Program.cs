@@ -87,7 +87,7 @@
                         }
                         else if (input == ConsoleKey.F)
                         {
-                            PlaceFlag(inputX, inputY);
+                            PlaceOrRemoveFlag(inputX, inputY);
                             break;
                         }
                     }
@@ -392,11 +392,11 @@
             }
         }
 
-        static void PlaceFlag(int x, int y)
+        static void PlaceOrRemoveFlag(int x, int y)
         {
             if (playArea[x, y].revealed)
             {
-                Console.WriteLine("cannot flag revealed field");
+                Console.WriteLine("\ncannot flag revealed field");
                 return;
             }
             if (playArea[x, y].flag)
