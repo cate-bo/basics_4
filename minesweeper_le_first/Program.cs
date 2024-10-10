@@ -18,11 +18,13 @@
         static int areaWidth = 0;
         static int areaHeight = 0;
         static int mineCount = 0;
-        static Fieldstate[,] playArea; //0-8 adjacent mines, 9 mine 
+        static Fieldstate[,] playArea;  
         static Random rand = new Random();
         static bool gameInProgress;
         static bool lose = false;
         static bool win = false;
+        static int widthNumberSize;
+        static int heightNumberSize;
         static void Main(string[] args)
         {
 
@@ -33,9 +35,13 @@
                 gameInProgress = true;
                 Console.WriteLine("enter area width");
                 areaWidth = Validate_Input(2, int.MaxValue);
+                widthNumberSize = CalculateNumberOfDigits(areaWidth);
+                //Console.WriteLine(widthNumberSize);
 
                 Console.WriteLine("enter area height");
                 areaHeight = Validate_Input(2, int.MaxValue);
+                heightNumberSize = CalculateNumberOfDigits(areaHeight);
+                //Console.WriteLine(heightNumberSize);
 
                 Console.WriteLine($"enter mine count (max {(areaWidth * areaHeight) / 2})");
                 mineCount = Validate_Input(1, (areaWidth * areaHeight) / 2);
@@ -105,14 +111,14 @@
 
                 if (win)
                 {
-                    Console.WriteLine("you win\n");
+                    Console.WriteLine("\nyou win\n");
 
                     RevealAllFields();
                     DisplayPlayArea();
                 }
                 else if (lose)
                 {
-                    Console.WriteLine("you lose\n");
+                    Console.WriteLine("\nyou lose\n");
 
                     RevealAllFields();
                     DisplayPlayArea();
@@ -142,6 +148,15 @@
             } while (playAgain);
         }
 
+        static int CalculateNumberOfDigits(int number, int numberOfDigits = 0)
+        {
+            if(number / Math.Pow(10, numberOfDigits - 1) < 11)
+            {
+                return numberOfDigits;
+            }
+            return CalculateNumberOfDigits(number, numberOfDigits + 1);
+        }
+
         static void RevealAllFields()
         {
             for (int y = 0; y < playArea.GetLength(1); y++)
@@ -157,22 +172,37 @@
         {
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write(" ");
-            for (int width = 0; width < playArea.GetLength(0); width++)
+            for(int remainingDigits = heightNumberSize;  remainingDigits > 0; remainingDigits--)
             {
-                Console.Write($"{width} ");
+                for(int padding = 0; padding < widthNumberSize; padding++)
+                {
+                    Console.Write(" ");
+                }
+                
+                for (int width = 0; width < playArea.GetLength(0); width++)
+                {
+                    Console.Write(Math.Floor(width % Math.Pow(10, remainingDigits ) / Math.Pow(10, remainingDigits - 1)) + " ");
+                }
+                Console.WriteLine();
             }
+            
+            
 
-            Console.BackgroundColor = ConsoleColor.White;
-            Console.ForegroundColor = ConsoleColor.Black;
+            
 
-            Console.WriteLine();
+            
 
             for (int y = 0; y < playArea.GetLength(1); y++)
             {
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.Write($"{y}");
+
+                string linebumber = "";
+                for (int remainingDigits = widthNumberSize; remainingDigits > 0; remainingDigits--)
+                {
+                    Console.Write(Math.Floor(y % Math.Pow(10, remainingDigits) / Math.Pow(10, remainingDigits - 1)));
+                }
+                
 
 
 
