@@ -36,12 +36,12 @@
                 Console.WriteLine("enter area width");
                 areaWidth = Validate_Input(2, int.MaxValue);
                 widthNumberSize = CalculateNumberOfDigits(areaWidth);
-                //Console.WriteLine(widthNumberSize);
+                Console.WriteLine(widthNumberSize);
 
                 Console.WriteLine("enter area height");
                 areaHeight = Validate_Input(2, int.MaxValue);
                 heightNumberSize = CalculateNumberOfDigits(areaHeight);
-                //Console.WriteLine(heightNumberSize);
+                Console.WriteLine(heightNumberSize);
 
                 Console.WriteLine($"enter mine count (max {(areaWidth * areaHeight) / 2})");
                 mineCount = Validate_Input(1, (areaWidth * areaHeight) / 2);
@@ -172,9 +172,9 @@
         {
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
-            for(int remainingDigits = heightNumberSize;  remainingDigits > 0; remainingDigits--)
+            for(int remainingDigits = widthNumberSize;  remainingDigits > 0; remainingDigits--)
             {
-                for(int padding = 0; padding < widthNumberSize; padding++)
+                for(int padding = 0; padding < heightNumberSize; padding++)
                 {
                     Console.Write(" ");
                 }
@@ -197,8 +197,8 @@
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.ForegroundColor = ConsoleColor.White;
 
-                string linebumber = "";
-                for (int remainingDigits = widthNumberSize; remainingDigits > 0; remainingDigits--)
+                
+                for (int remainingDigits = heightNumberSize; remainingDigits > 0; remainingDigits--)
                 {
                     Console.Write(Math.Floor(y % Math.Pow(10, remainingDigits) / Math.Pow(10, remainingDigits - 1)));
                 }
