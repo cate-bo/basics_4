@@ -150,7 +150,7 @@
 
         static int CalculateNumberOfDigits(int number, int numberOfDigits = 0)
         {
-            if(number / Math.Pow(10, numberOfDigits - 1) < 11)
+            if(number / Math.Pow(10, numberOfDigits - 1) < 10)
             {
                 return numberOfDigits;
             }
