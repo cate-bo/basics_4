@@ -1,0 +1,15 @@
+C:\Users\cate\source\repos\basics_4\basics_4\recursion\bin\Debug\net8.0\recursion.exe
+C:\Users\cate\source\repos\basics_4\basics_4\recursion\bin\Debug\net8.0\recursion.deps.json
+C:\Users\cate\source\repos\basics_4\basics_4\recursion\bin\Debug\net8.0\recursion.runtimeconfig.json
+C:\Users\cate\source\repos\basics_4\basics_4\recursion\bin\Debug\net8.0\recursion.dll
+C:\Users\cate\source\repos\basics_4\basics_4\recursion\bin\Debug\net8.0\recursion.pdb
+C:\Users\cate\source\repos\basics_4\basics_4\recursion\obj\Debug\net8.0\recursion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cate\source\repos\basics_4\basics_4\recursion\obj\Debug\net8.0\recursion.AssemblyInfoInputs.cache
+C:\Users\cate\source\repos\basics_4\basics_4\recursion\obj\Debug\net8.0\recursion.AssemblyInfo.cs
+C:\Users\cate\source\repos\basics_4\basics_4\recursion\obj\Debug\net8.0\recursion.csproj.CoreCompileInputs.cache
+C:\Users\cate\source\repos\basics_4\basics_4\recursion\obj\Debug\net8.0\recursion.sourcelink.json
+C:\Users\cate\source\repos\basics_4\basics_4\recursion\obj\Debug\net8.0\recursion.dll
+C:\Users\cate\source\repos\basics_4\basics_4\recursion\obj\Debug\net8.0\refint\recursion.dll
+C:\Users\cate\source\repos\basics_4\basics_4\recursion\obj\Debug\net8.0\recursion.pdb
+C:\Users\cate\source\repos\basics_4\basics_4\recursion\obj\Debug\net8.0\recursion.genruntimeconfig.cache
+C:\Users\cate\source\repos\basics_4\basics_4\recursion\obj\Debug\net8.0\ref\recursion.dll

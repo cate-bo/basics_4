@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("multidimensional_arrays")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e19e5d46bfc48f95a87a733d1a7d21f88ee06075")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8367803622dbc3e0ef0d758d46317d06d36fba64")]
 [assembly: System.Reflection.AssemblyProductAttribute("multidimensional_arrays")]
 [assembly: System.Reflection.AssemblyTitleAttribute("multidimensional_arrays")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

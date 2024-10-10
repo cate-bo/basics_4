@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arrays", "arrays\arrays.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "another_guessing_game", "another_guessing_game\another_guessing_game.csproj", "{CCC85952-838F-4E99-9D4C-BD9855822DDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "multidimensional_arrays", "multidimensional_arrays\multidimensional_arrays.csproj", "{E351C7E3-7D4B-4777-93DB-0C4E507FC762}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "multidimensional_arrays", "multidimensional_arrays\multidimensional_arrays.csproj", "{E351C7E3-7D4B-4777-93DB-0C4E507FC762}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minesweeper_le_first", "minesweeper_le_first\minesweeper_le_first.csproj", "{82F01167-CBC6-4594-BC94-A8DAF451B0AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "minesweeper_le_first", "minesweeper_le_first\minesweeper_le_first.csproj", "{82F01167-CBC6-4594-BC94-A8DAF451B0AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "recursion", "recursion\recursion.csproj", "{A78A8015-B032-4BAB-99F8-8371EADB7CE1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{82F01167-CBC6-4594-BC94-A8DAF451B0AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82F01167-CBC6-4594-BC94-A8DAF451B0AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82F01167-CBC6-4594-BC94-A8DAF451B0AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A78A8015-B032-4BAB-99F8-8371EADB7CE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A78A8015-B032-4BAB-99F8-8371EADB7CE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A78A8015-B032-4BAB-99F8-8371EADB7CE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A78A8015-B032-4BAB-99F8-8371EADB7CE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
