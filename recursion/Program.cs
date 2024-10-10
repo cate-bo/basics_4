@@ -4,8 +4,9 @@
     {
         static void Main(string[] args)
         {
-            int test = Sum(3);
-            Console.WriteLine(test);
+
+
+           Fibonacci(100);
         }
 
         static int Sum(int value)
@@ -15,6 +16,17 @@
                 return 0;
             }
             return value + Sum(value -1);
+        }
+
+
+        static int Fibonacci(int max, int former = 0, int current = 1)
+        {
+            Console.WriteLine(current);
+            if(former + current > max)
+            { 
+                return current;
+            }
+            return Fibonacci(max, current,former + current);
         }
     }
 }
