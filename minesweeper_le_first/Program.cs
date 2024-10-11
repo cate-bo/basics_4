@@ -36,12 +36,12 @@
                 Console.WriteLine("enter area width");
                 areaWidth = Validate_Input(2, int.MaxValue);
                 widthNumberSize = CalculateNumberOfDigits(areaWidth);
-                Console.WriteLine(widthNumberSize);
+                //Console.WriteLine(widthNumberSize);
 
                 Console.WriteLine("enter area height");
                 areaHeight = Validate_Input(2, int.MaxValue);
                 heightNumberSize = CalculateNumberOfDigits(areaHeight);
-                Console.WriteLine(heightNumberSize);
+                //Console.WriteLine(heightNumberSize);
 
                 Console.WriteLine($"enter mine count (max {(areaWidth * areaHeight) / 2})");
                 mineCount = Validate_Input(1, (areaWidth * areaHeight) / 2);
