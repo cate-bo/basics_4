@@ -150,7 +150,7 @@
 
         static int CalculateNumberOfDigits(int number, int numberOfDigits = 0)
         {
-            if(number / Math.Pow(10, numberOfDigits - 1) < 10)
+            if((number - 1) / Math.Pow(10, numberOfDigits - 1) < 10)
             {
                 return numberOfDigits;
             }
@@ -365,6 +365,10 @@
         static void RevealField(int x, int y)
         {
             if (playArea[x, y].flag)
+            {
+                return;
+            }
+            if (playArea[x, y].revealed)
             {
                 return;
             }
