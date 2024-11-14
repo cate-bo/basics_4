@@ -385,16 +385,26 @@
 
                 foreach ((int x, int y) coordinate in currentBuffer)
                 {
-                    for (int row = y - 1; row <= y + 1; row++)
+                    for (int row = coordinate.y - 1; row <= coordinate.y + 1; row++)
                     {
                         if (row == -1 || row == playArea.GetLength(1)) continue;
-                        for (int column = x - 1; column <= x + 1; column++)
+                        for (int column = coordinate.x - 1; column <= coordinate.x + 1; column++)
                         {
                             if (column == -1 || column == playArea.GetLength(0)) continue;
-
+                            if ((playArea[column, row].adjacentMines == 0) && !playArea[column, row].revealed) nextBuffer.Add((column, row));
+                            playArea[column, row].revealed = true;
+                            
                         }
                     }
                 }
+
+                currentBuffer.Clear();
+                temp = currentBuffer;
+                currentBuffer = nextBuffer;
+                nextBuffer = temp;
+                //Console.Clear();
+                //DisplayPlayArea();
+                //Thread.Sleep(200);
             }
         }
 
