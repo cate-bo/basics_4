@@ -364,65 +364,36 @@
 
         static void RevealField(int x, int y)
         {
-            if (playArea[x, y].flag)
-            {
-                return;
-            }
-            if (playArea[x, y].revealed)
-            {
-                return;
-            }
-
+            if (playArea[x, y].flag || playArea[x, y].revealed) return;
             playArea[x, y].revealed = true;
-
-
-
             if (playArea[x, y].containsMine)
             {
                 lose = true;
                 return;
             }
-            if (playArea[x, y].adjacentMines > 0)
-            {
-                return;
-            }
+            if (playArea[x, y].adjacentMines > 0) return;
 
+            List<(int, int)> currentBuffer = new List<(int x, int y)>();
+            List<(int, int)> nextBuffer = new List<(int x, int y)>();
+            List<(int, int)> temp;
 
-            int upperOffset = 1;
-            int lowerOffset = 1;
-            int leftOffset = 1;
-            int rightOffset = 1;
+            currentBuffer.Add((x, y));
 
-            if (y == 0)
+            while (true)
             {
-                upperOffset = 0;
-            }
-            if (y == playArea.GetLength(1) - 1)
-            {
-                lowerOffset = 0;
-            }
-            if (x == 0)
-            {
-                leftOffset = 0;
-            }
-            if (x == playArea.GetLength(0) - 1)
-            {
-                rightOffset = 0;
-            }
+                if(currentBuffer.Count == 0) break;
 
-
-
-            for (int height = y - upperOffset; height <= y + lowerOffset; height++)
-            {
-                for (int width = x - leftOffset; width <= x + rightOffset; width++)
+                foreach ((int x, int y) coordinate in currentBuffer)
                 {
-
-                    if (!playArea[width, height].revealed)
+                    for (int row = y - 1; row <= y + 1; row++)
                     {
-                        RevealField(width, height);
-                    }
+                        if (row == -1 || row == playArea.GetLength(1)) continue;
+                        for (int column = x - 1; column <= x + 1; column++)
+                        {
+                            if (column == -1 || column == playArea.GetLength(0)) continue;
 
-                    //playArea[width, height].revealed = true;
+                        }
+                    }
                 }
             }
         }
